@@ -9,7 +9,7 @@
     <!-- HEADER -->
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo">
+        <a class="page-header__logo" href="index.html">
           <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина «‎Мишка»">
         </a>
 
@@ -21,7 +21,7 @@
               <a class="site-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Вязание на заказ</a>
+              <a class="site-list__link" href="#">Вязание на заказ</a>
             </li>
           </ul>
           <ul class="main-nav__list user-list">
@@ -103,7 +103,7 @@
 
           <!-- FIELDSET CUSTOMER NAME -->
           <fieldset class="form__fieldset form__fieldset--customer-name">
-            <legend class="form__legend">ФИО</legend>
+            <legend class="form__legend" aria-label="Фамилия, имя, отчество">ФИО</legend>
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__label" for="text-customer-f-name">Имя</label>
@@ -122,26 +122,25 @@
 
           <!-- FIELDSET PHONE -->
           <fieldset class="form__fieldset form__fieldset--customer-phone">
-            <legend class="form__legend">Тел</legend>
+            <legend class="form__legend" aria-label="Телефон">Тел</legend>
             <input class="form__input form__input--phone" type="tel" name="customer-phone" pattern="[+]{1}[7]{1}[ ]{1}[0-9]{3}[ ]{1}[0-9]{3}[ ]{1}[0-9]{2}[ ]{1}[0-9]{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
           </fieldset>
 
           <!-- FIELDSET EMAIL -->
           <fieldset class="form__fieldset form__fieldset--customer-email">
-            <legend class="form__legend">E-mail</legend>
+            <legend class="form__legend" aria-label="Электронная почта">E-mail</legend>
             <input class="form__input form__input--email" type="email" name="customer-email" placeholder="Ваш Email*" required>
           </fieldset>
 
           <!-- FIELDSET ADDITIONAL -->
           <fieldset class="form__fieldset form__fieldset--textarea">
-            <legend class="form__legend">Доп</legend>
+            <legend class="form__legend" aria-label="Дополнительные пожелания">Доп</legend>
             <textarea class="form__input form__input--textarea" name="order-wishes" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
 
           <!-- SUBMIT -->
           <p class="form__disclaimer">*Поля обязательны для заполнения</p>
           <input class="button form__submit" type="submit" value="Отправить заказ">
-
         </form>
       </div>
     </main>
