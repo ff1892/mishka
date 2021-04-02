@@ -1,0 +1,36 @@
+.products__title {
+  .font(@title-black, 27px, 30px, 700);
+}
+
+.products__list {
+  .list-reset();
+}
+
+.products__link {
+  .font(#fff, 19px, 24px, 700);
+  text-decoration: none;
+}
+
+.products__link--interior {
+  background-color: @accent;
+
+  &:hover {
+    background-color: @accent-hover;
+  }
+
+  &:active {
+    background-color: @accent-hover;
+  }
+}
+
+.products__link--toys {
+  background-color: @accent-dark;
+
+  &:hover {
+    background-color: @accent-dark-hover;
+  }
+
+  &:active {
+    background-color: @accent-dark-hover;
+  }
+}

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
 
@@ -41,7 +42,7 @@
             </li>
           </ul>
         </nav>
-        <p>Бесплатная доставка по России</p>
+        <p class="page-header__side-info">Бесплатная доставка по России</p>
       </div>
     </header>
 
@@ -55,12 +56,12 @@
           <h2 class="products__title">Милые штуки ручной работы для дома</h2>
           <ul class="products__list">
             <li class="products__item">
-              <a class="products__link" href="#">
+              <a class="products__link products__link--interior" href="#">
                 <span class="products__link-text">Предметы интерьера</span>
               </a>
             </li>
             <li class="products__item">
-              <a class="products__link" href="#">
+              <a class="products__link products__link--toys" href="#">
                 <span class="products__link-text">Детские игрушки</span>
               </a>
             </li>
@@ -124,7 +125,7 @@
           <h2 class="reviews__title">Отзывы</h2>
           <ul class="reviews__list slider__list">
             <li class="reviews__item slider__item">
-              <blockquote>
+              <blockquote class="reviews__citation">
                 <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
                 <cite class="reviews__author">
                   <span class="reviews__author-name">Анастасия Красильникова</span>
@@ -133,7 +134,7 @@
               </blockquote>
             </li>
             <li class="reviews__item slider__item">
-              <blockquote>
+              <blockquote class="reviews__citation">
                 <p class="reviews__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
                 <cite class="reviews__author">
                   <span class="reviews__author-name">Екатерина Красильникова</span>
@@ -142,7 +143,7 @@
               </blockquote>
             </li>
             <li class="reviews__item slider__item">
-              <blockquote>
+              <blockquote class="reviews__citation">
                 <p class="reviews__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
                 <cite class="reviews__author">
                   <span class="reviews__author-name">Елена Красильникова</span>
@@ -165,7 +166,7 @@
           <h2 class="contacts__title">Контакты</h2>
           <div class="contacts__item">
             <p class="contacts__item-title">e-mail:</p>
-            <a class="contacts__item-description contacts__item-description--link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            <a class="contacts__item-description contacts__item-description--email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
           </div>
           <div class="contacts__item">
             <p class="contacts__item-title">Адрес:</p>
