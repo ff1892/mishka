@@ -1,0 +1,22 @@
+.contacts__title {
+  .font(@title-black, 18px, 30px, 700);
+}
+
+.contacts__item {
+  .font(@basic-grey, 14px, 30px, 400);
+}
+
+.contacts__item-description--email {
+  color: @basic-grey;
+  text-decoration: none;
+  border-bottom: 1px solid @accent-email;
+
+  &:hover {
+    color: @accent-dark-hover;
+    border-color: @accent-dark-hover;
+  }
+
+  &:active {
+    border-color: fade(@accent-dark-hover, 10%);
+  }
+}
