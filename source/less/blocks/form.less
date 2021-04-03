@@ -34,26 +34,6 @@
   }
 }
 
-.form__input--phone,
-.form__input--email {
-  border: none;
-  box-shadow: inset 0 -2px 0 @form-black;
-  .font(@basic-grey, 17px, 18px, 400);
-
-  &::placeholder {
-    color: @black-30;
-  }
-
-  &:hover {
-    box-shadow: inset 0 -2px 0 @accent-input;
-  }
-
-  &:focus {
-    box-shadow: inset 0 -2px 0 @accent-input;
-    outline: 0;
-  }
-}
-
 .form__input--textarea {
   border: 2px solid @basic-grey;
   .font(@basic-grey, 17px, 18px, 400);
@@ -75,4 +55,9 @@
 
 .form__disclaimer {
   .font(@basic-grey, 14px, 16px, 400);
+}
+
+.form__submit {
+  .font(@basic-grey, 17px, 16px, 700);
+  font-family: "Open Sans", "Arial", sans-serif;
 }
