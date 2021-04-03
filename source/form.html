@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
 
@@ -47,15 +48,19 @@
 
     <!-- MAIN -->
     <main class="form-main">
+      <div class="form-main__background">
+        <div class="form-main__wrapper">
+          <h1 class="form-main__title">Вязание на заказ</h1>
+        </div>
+      </div>
       <div class="form-main__wrapper">
-        <h1 class="form-main__title">Вязание на заказ</h1>
         <p class="form-main__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <h2 class="visually-hidden">Форма заказа</h2>
 
         <!-- FORM -->
         <form class="form-main__form form" method="GET" action="https://echo.htmlacademy.ru" target="_blank">
 
-          <!-- FIELDSET TYPE -->
+          <!-- FIELDSET PRODUCT TYPE -->
           <fieldset class="form__fieldset form__fieldset--radio">
             <legend class="form__legend">Тип</legend>
             <ul class="form__list">

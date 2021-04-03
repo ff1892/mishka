@@ -1,0 +1,78 @@
+.form__fieldset {
+  border: none;
+}
+
+.form__legend {
+  .font(@accent, 17px, 16px, 700);
+  text-transform: uppercase;
+}
+
+.form__list {
+  .list-reset();
+}
+
+.form__label {
+  .font(@form-black, 17px, 18px, 700);
+}
+
+.form__input--text {
+  border: none;
+  box-shadow: inset 0 -2px 0 @form-black;
+  .font(@basic-grey, 17px, 18px, 400);
+
+  &::placeholder {
+    color: @black-30;
+  }
+
+  &:hover {
+    box-shadow: inset 0 -2px 0 @accent-input;
+  }
+
+  &:focus {
+    box-shadow: inset 0 -2px 0 @accent-input;
+    outline: 0;
+  }
+}
+
+.form__input--phone,
+.form__input--email {
+  border: none;
+  box-shadow: inset 0 -2px 0 @form-black;
+  .font(@basic-grey, 17px, 18px, 400);
+
+  &::placeholder {
+    color: @black-30;
+  }
+
+  &:hover {
+    box-shadow: inset 0 -2px 0 @accent-input;
+  }
+
+  &:focus {
+    box-shadow: inset 0 -2px 0 @accent-input;
+    outline: 0;
+  }
+}
+
+.form__input--textarea {
+  border: 2px solid @basic-grey;
+  .font(@basic-grey, 17px, 18px, 400);
+  font-family: "Open Sans", "Arial", sans-serif;
+
+  &::placeholder {
+    color: @black-30;
+  }
+
+  &:hover {
+    border-color: @accent-input;
+  }
+
+  &:focus {
+    border-color: @accent-input;
+    outline: 0;
+  }
+}
+
+.form__disclaimer {
+  .font(@basic-grey, 14px, 16px, 400);
+}
