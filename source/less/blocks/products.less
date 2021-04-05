@@ -4,9 +4,28 @@
 
 .products__list {
   .list-reset();
+  min-width: 320px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    max-width: @desktop-width;
+  }
+}
+
+.products__item {
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+  }
 }
 
 .products__link {
+  display: block;
   .font(#fff, 19px, 24px, 700);
   text-decoration: none;
 }
