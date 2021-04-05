@@ -1,5 +1,15 @@
+.promo__wrapper {
+  // media
+  display: grid;
+  grid-template-columns: min-content 1fr 1fr min-content;
+  grid-template-rows: repeat(5, auto);
+}
+
 .promo__title {
   .font(@title-black, 25px, 30px, 700);
+  // media
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .promo__time {
@@ -9,6 +19,15 @@
 
 .promo__text {
   .font(@basic-grey, 15px, 24px, 400);
+  // media
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.promo__info {
+  //media
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .promo__info-item {
@@ -19,6 +38,27 @@
   margin: 0;
 }
 
+.promo__picture {
+  width: 260px;
+  height: 315px;
+  // media
+  grid-column-start: 3;
+  grid-column-end:  -1;
+  grid-row-start: 2;
+  grid-row-end: -1;
+  margin-left: 42px;
+}
+
 .promo__price {
   .font(@basic-grey, 17px, 24px, 700);
+  // media
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.promo__button {
+  max-width: 292px;
+  // media
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
