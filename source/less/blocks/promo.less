@@ -19,17 +19,14 @@
   .font(@title-black, 25px, 30px, 700);
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column: ~"1 / 4";
     font-size: 43px;
     line-height: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-column: ~"2 / 5";
+    grid-row: ~"2 / 3";
     z-index: 2;
     font-size: 53px;
     line-height: 57px;
@@ -41,8 +38,7 @@
   text-transform: uppercase;
 
   @media (min-width: @desktop-width) {
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row: ~"2 / 3";
   }
 }
 
@@ -50,30 +46,22 @@
   .font(@basic-grey, 15px, 24px, 400);
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: ~"1 / 3";
   }
 
   @media (min-width: @desktop-width) {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-area: ~"3 / 2 / 4 / 4"
   }
 }
 
 .promo__info {
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: ~"1 / 3";
   }
 
   @media (min-width: @desktop-width) {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-area: ~"4 / 2 / 5 / 4";
   }
 }
 
@@ -90,18 +78,12 @@
   height: 315px;
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 3;
-    grid-column-end:  -1;
-    grid-row-start: 2;
-    grid-row-end: -1;
+    grid-area: ~"2 / 3 / -1 / -1";
     margin-left: 42px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-column-start: 4;
-    grid-column-end:  -1;
-    grid-row-start: 1;
-    grid-row-end: -1;
+    grid-area: ~"1 / 4 / -1 / -1";
     margin-left: 58px;
   }
 }
@@ -110,15 +92,11 @@
   .font(@basic-grey, 17px, 24px, 700);
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: ~"1 / 3";
   }
 
   @media (min-width: @desktop-width) {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-area: ~"5 / 2 / 6 / 4";
   }
 }
 
@@ -126,14 +104,10 @@
   max-width: 292px;
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: ~"1 / 3";
   }
 
   @media (min-width: @desktop-width) {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 7;
+    grid-area: ~"6 / 2 / 7 / 3";
   }
 }

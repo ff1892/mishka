@@ -1,3 +1,11 @@
+.advantages__wrapper {
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
 .advantages__list {
   .list-reset();
 
@@ -8,13 +16,17 @@
     grid-auto-flow: column;
   }
 
-  // @media (min-width: @desktop-width) {
-  //   grid-template-columns: repeat(6, 1fr);
-  // }
+  @media (min-width: @desktop-width) {
+    grid-column: ~"2 / 6";
+  }
 }
 
 .advantages__title {
   .font(@title-black, 25px, 30px, 700);
+
+  @media (min-width: @desktop-width) {
+    grid-column: ~"2 / 6";
+  }
 }
 
 .advantages__item {
