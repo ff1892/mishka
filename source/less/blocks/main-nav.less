@@ -1,0 +1,45 @@
+.main-nav {
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.main-nav__logo {
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    grid-area: ~"1 / 3 / 2 / 5";
+    justify-self: center;
+    padding: 0 10px;
+  }
+}
+
+.main-nav__toggle {
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__side-info {
+  .font(@basic-grey, 15px, 24px, 400);
+  margin: 0;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    justify-self: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: ~"5 / 7";
+  }
+}
