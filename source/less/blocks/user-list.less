@@ -1,5 +1,15 @@
 .user-list {
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    grid-area: ~"1 / 2 / 2 / 3";
+    justify-self: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: ~"1 / 5 / 2 / 7";
+  }
 }
 
 .user-list__link {

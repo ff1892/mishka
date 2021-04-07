@@ -1,5 +1,13 @@
 .site-list {
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: ~"1 / 1 / 2 / 4";
+  }
 }
 
 .site-list__link {

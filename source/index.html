@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -9,13 +10,13 @@
 
     <!-- HEADER -->
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo">
-          <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина «‎Мишка»">
-        </a>
+      <div class="page-header__wrapper container">
 
         <!-- NAVIGATION -->
         <nav class="main-nav">
+          <a class="main-nav__logo">
+            <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина «‎Мишка»">
+          </a>
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -41,8 +42,8 @@
               <a class="offer-list__link" href="#">Распродажа</a>
             </li>
           </ul>
+          <p class="main-nav__side-info">Бесплатная доставка по России</p>
         </nav>
-        <p class="page-header__side-info">Бесплатная доставка по России</p>
       </div>
     </header>
 
@@ -52,26 +53,26 @@
 
       <!-- PRODUCTS -->
       <section class="products">
-        <div class="products__wrapper">
+        <div class="products__wrapper container">
           <h2 class="products__title">Милые штуки ручной работы для дома</h2>
-          <ul class="products__list">
-            <li class="products__item">
-              <a class="products__link products__link--interior" href="#">
-                <span class="products__link-text">Предметы интерьера</span>
-              </a>
-            </li>
-            <li class="products__item">
-              <a class="products__link products__link--toys" href="#">
-                <span class="products__link-text">Детские игрушки</span>
-              </a>
-            </li>
-          </ul>
         </div>
+        <ul class="products__list">
+          <li class="products__item">
+            <a class="products__link products__link--interior" href="#">
+              <span class="products__link-text">Предметы интерьера</span>
+            </a>
+          </li>
+          <li class="products__item">
+            <a class="products__link products__link--toys" href="#">
+              <span class="products__link-text">Детские игрушки</span>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <!-- PROMO -->
       <section class="promo">
-        <div class="promo__wrapper">
+        <div class="promo__wrapper container">
           <h2 class="promo__title">Вязаные корзинки</h2>
           <strong class="promo__time">Товар недели</strong>
           <p class="promo__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
@@ -97,7 +98,7 @@
 
       <!-- ADVANTAGES -->
       <section class="advantages">
-        <div class="advantages__wrapper">
+        <div class="advantages__wrapper container">
           <h2 class="advantages__title">Коротко о нас:</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--eco">
@@ -108,6 +109,9 @@
             </li>
             <li class="advantages__item advantages__item--likes">
               <p class="advantages__description">Увеличивает лайки на фотографиях</p>
+            </li>
+            <li class="advantages__item advantages__item--craft">
+              <p class="advantages__description">Связано вручную с любовью и умилением</p>
             </li>
             <li class="advantages__item advantages__item--motherland">
               <p class="advantages__description">Поддержка отечественного производителя</p>
@@ -121,10 +125,10 @@
 
       <!-- REVIEWS -->
       <section class="reviews">
-        <div class="reviews__wrapper slider">
+        <div class="reviews__wrapper container slider">
           <h2 class="reviews__title">Отзывы</h2>
           <ul class="reviews__list slider__list">
-            <li class="reviews__item slider__item">
+            <li class="reviews__item slider__item slider__item--1">
               <blockquote class="reviews__citation">
                 <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
                 <cite class="reviews__author">
@@ -133,7 +137,7 @@
                 </cite>
               </blockquote>
             </li>
-            <li class="reviews__item slider__item">
+            <li class="reviews__item slider__item slider__item--2">
               <blockquote class="reviews__citation">
                 <p class="reviews__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
                 <cite class="reviews__author">
@@ -142,7 +146,7 @@
                 </cite>
               </blockquote>
             </li>
-            <li class="reviews__item slider__item">
+            <li class="reviews__item slider__item slider__item--3">
               <blockquote class="reviews__citation">
                 <p class="reviews__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
                 <cite class="reviews__author">
@@ -163,21 +167,25 @@
       <!-- CONTACTS -->
       <section class="contacts">
         <div class="contacts__wrapper">
-          <h2 class="contacts__title">Контакты</h2>
-          <div class="contacts__item">
-            <p class="contacts__item-title">e-mail:</p>
-            <a class="contacts__item-description contacts__item-description--email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          <div class="contacts__wrapper-element contacts__wrapper-element-top">
+            <h2 class="contacts__title">Контакты</h2>
+            <div class="contacts__info">
+              <div class="contacts__item">
+                <p class="contacts__item-title">e-mail:</p>
+                <a class="contacts__item-description contacts__item-description--email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              </div>
+              <div class="contacts__item">
+                <p class="contacts__item-title">Адрес:</p>
+                <p class="contacts__item-description">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</p>
+              </div>
+            </div>
           </div>
-          <div class="contacts__item">
-            <p class="contacts__item-title">Адрес:</p>
-            <p class="contacts__item-description">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</p>
+          <div class="contacts__map" style="background-color: wheat;">
           </div>
-        </div>
-        <div class="contacts__map">
-        </div>
-        <div class="contacts__wrapper">
-          <div class="contacts__feedback">
-            <a class="button contacts__write-us" href="#">Напишите нам</a>
+          <div class="contacts__wrapper-element contacts__wrapper-element-bottom">
+            <div class="contacts__feedback">
+              <a class="button contacts__write-us" href="#">Напишите нам</a>
+            </div>
           </div>
         </div>
       </section>
@@ -185,7 +193,7 @@
 
     <!-- FOOTER -->
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="page-footer__wrapper container">
         <a class="page-footer__logo">
           <img src="img/logo-footer.svg" width="102" height="34" alt="Логотип магазина «‎Мишка»">
         </a>
