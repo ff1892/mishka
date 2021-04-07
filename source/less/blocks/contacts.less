@@ -1,5 +1,4 @@
 .contacts__wrapper {
-
   @media (min-width: @desktop-width) {
     max-width: @desktop-width;
     margin: 0 auto;
@@ -28,19 +27,18 @@
 .contacts__title {
   .font(@title-black, 18px, 30px, 700);
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     font-size: 53px;
     line-height: 57px;
   }
 }
 
 .contacts__info {
-
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -82,13 +80,15 @@
   }
 }
 
-.contacts__map{
+.contacts__map {
   min-width: 320px;
   min-height: 454px;
+
   @media (min-width: @desktop-width) {
     grid-area: ~"1 / 4 / -1 / -1";
   }
 }
+
 .contacts__feedback {
   text-align: center;
 }
