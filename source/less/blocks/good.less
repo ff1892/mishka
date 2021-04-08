@@ -1,16 +1,32 @@
+.good {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    display: flex;
+    width: 668px;
+    margin-bottom: 20px;
+  }
+}
+
 .good__picture {
   background-color: @bg-grey;
   display: block;
   object-fit: cover;
 
   @media (min-width: @tablet-width) {
-    width: 344px;
-    height: 344px;
+    width: 334px;
+    height: 334px;
   }
 
   @media (min-width: @desktop-width) {
     width: 316px;
     height: 462px;
+  }
+}
+
+.good__description {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    display: flex;
+    flex-direction: column;
+    width: 334px;
   }
 }
 
@@ -25,4 +41,14 @@
 
 .good__price {
   .font(@catalog-black, 15px, 24px, 700);
+}
+
+.good__order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+  }
 }
