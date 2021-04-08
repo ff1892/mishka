@@ -4,8 +4,22 @@
 
 .form-main__title {
   .font(@title-black, 27px, 30px, 700);
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .form-main__intro {
   .font(@basic-grey, 13px, 24px, 400);
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-left: 175px;
+    padding-right: 175px;
+  }
 }

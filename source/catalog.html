@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -9,17 +10,17 @@
 
     <!-- HEADER -->
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo" href="index.html">
-          <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина «‎Мишка»">
-        </a>
+      <div class="page-header__wrapper container">
 
         <!-- NAVIGATION -->
         <nav class="main-nav">
+          <a class="main-nav__logo">
+            <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина «‎Мишка»">
+          </a>
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a class="site-list__link" href="#">Каталог товаров</a>
+              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="form.html">Вязание на заказ</a>
@@ -41,8 +42,8 @@
               <a class="offer-list__link" href="#">Распродажа</a>
             </li>
           </ul>
+          <p class="main-nav__side-info">Бесплатная доставка по России</p>
         </nav>
-        <p class="page-header__side-info">Бесплатная доставка по России</p>
       </div>
     </header>
 
@@ -61,7 +62,11 @@
 
           <article class="catalog__item good">
             <a class="good__picture-link" href="#">
-              <img class="good__picture" src="https://dummyimage.com/260x195/d9d9d9/8f8f8f" width="260" height="195" alt="Голубой заяц с белой головой стоит на двух лапах">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="https://dummyimage.com/316x462/d9d9d9/8f8f8f">
+                <source media="(min-width: 768px)" srcset="https://dummyimage.com/334x334/d9d9d9/8f8f8f">
+                <img class="good__picture" src="https://dummyimage.com/260x195/d9d9d9/8f8f8f" width="260" height="195" alt="Голубой заяц с белой головой стоит на двух лапах">
+              </picture>
             </a>
             <h3 class="good__title">
               <a class="good__title-link" href="#">Зайчик-попрыгайчик</a>
@@ -75,7 +80,11 @@
 
           <article class="catalog__item good">
             <a class="good__picture-link" href="#">
-              <img class="good__picture" src="https://dummyimage.com/260x195/d9d9d9/8f8f8f" width="260" height="195" alt="Круглая вязаная корзина. Снизу оранжевая, сверху белая">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="https://dummyimage.com/316x462/d9d9d9/8f8f8f">
+                <source media="(min-width: 768px)" srcset="https://dummyimage.com/334x334/d9d9d9/8f8f8f">
+                <img class="good__picture" src="https://dummyimage.com/260x195/d9d9d9/8f8f8f" width="260" height="195" alt="Круглая вязаная корзина. Снизу оранжевая, сверху белая">
+              </picture>
             </a>
             <h3 class="good__title">
               <a class="good__title-link" href="#">Корзинка для белья</a>
@@ -89,7 +98,11 @@
 
           <article class="catalog__item good">
             <a class="good__picture-link" href="#">
-              <img class="good__picture" src="https://dummyimage.com/260x195/d9d9d9/8f8f8f" width="260" height="195" alt="Круглая вязаная корзина. Снизу зелёная, сверху белая">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="https://dummyimage.com/316x462/d9d9d9/8f8f8f">
+                <source media="(min-width: 768px)" srcset="https://dummyimage.com/334x334/d9d9d9/8f8f8f">
+                <img class="good__picture" src="https://dummyimage.com/260x195/d9d9d9/8f8f8f" width="260" height="195" alt="Круглая вязаная корзина. Снизу зелёная, сверху белая">
+              </picture>
             </a>
             <h3 class="good__title">
               <a class="good__title-link" href="#">Большая корзинка для игрушек</a>

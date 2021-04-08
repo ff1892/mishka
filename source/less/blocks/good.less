@@ -1,8 +1,17 @@
 .good__picture {
   background-color: @bg-grey;
   display: block;
-  width: 260px;
-  height: 195px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 344px;
+    height: 344px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 316px;
+    height: 462px;
+  }
 }
 
 .good__title-link {
