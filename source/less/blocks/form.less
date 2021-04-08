@@ -1,23 +1,17 @@
 .form__fieldset {
   border: none;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: baseline;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 62px;
+  }
 }
-
-// .form__wrapper {
-
-//   @media (min-width: @tablet-width) {
-//     display: flex;
-//     align-items: baseline;
-//   }
-// }
-
-// .form__fieldset--radio {
-//   background: red;
-// }
 
 .form__fieldset--customer-phone,
 .form__fieldset--customer-email,
@@ -30,7 +24,17 @@
   }
 }
 
+.form__background-fieldset {
+  @media (min-width: @tablet-width) {
+    background-color: @bg-grey;
+  }
+}
 
+.form__wrapper {
+  @media (min-width: @desktop-width) {
+    padding-right: 225px;
+  }
+}
 
 .form__legend {
   .font(@accent, 17px, 16px, 700);
@@ -39,6 +43,11 @@
 
   @media (min-width: @tablet-width) {
     flex-basis: 167px;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-basis: 113px;
     flex-shrink: 0;
   }
 }
@@ -85,6 +94,7 @@
 
 .form__input--text {
   border: none;
+  background-color: transparent;
   box-shadow: inset 0 -2px 0 @form-black;
   .font(@basic-grey, 17px, 18px, 400);
 
@@ -130,11 +140,33 @@
   }
 }
 
+.form__submit {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 175px;
+  }
+}
+
 .form__disclaimer {
   .font(@basic-grey, 14px, 16px, 400);
 }
 
-.form__submit {
+.form__submit-button {
   .font(@basic-grey, 17px, 16px, 700);
   font-family: "Open Sans", "Arial", sans-serif;
+  align-self: center;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+
+
 }
