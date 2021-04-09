@@ -1,5 +1,37 @@
+.production {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.production__title-wrapper {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.production__title-wrapper--top {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.production__title-wrapper--bottom {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
 .production__title {
   .font(@title-black, 17px, 24px, 700);
+  margin: 0;
 }
 
 .production__description {
