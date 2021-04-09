@@ -1,6 +1,27 @@
+.video {
+  position: relative;
+  align-self: center;
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .video__media {
   display: block;
   background-color: @bg-grey;
-  width: 260px;
-  height: 150px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    height: 455px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 683px;
+    height: 455px;
+  }
 }

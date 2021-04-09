@@ -1,11 +1,37 @@
+.production {
+  display: flex;
+  flex-direction: column;
+}
+
+.production__title-wrapper {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
 .production__title {
   .font(@title-black, 17px, 24px, 700);
+  margin: 0;
 }
 
 .production__description {
   .font(@basic-grey, 13px, 24px, 400);
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
 }
 
 .production__button {
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 584px;
+    order: 4;
+  }
 }
