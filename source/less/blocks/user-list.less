@@ -12,7 +12,49 @@
   }
 }
 
+.user-list__item {
+  box-shadow: 0px 1px 0px @menu-shadow, inset 0px 1px 0px @menu-shadow;
+}
+
 .user-list__link {
+  position: relative;
+  display: block;
+  padding: 28px 30px 26px 76px;
   .font-size(17px, 24px, 700);
-  .text-link();
+  color: @link-black;
+  text-decoration: none;
+
+  &:hover .user-list__text {
+    opacity: 0.6;
+  }
+
+  &:hover .user-list__shape {
+    fill: @accent;
+    fill-opacity: 1;
+  }
+
+  &:active .user-list__text {
+    opacity: 0.3;
+  }
+
+  &:active .user-list__shape {
+    fill-opacity: 0.3;
+  }
+}
+
+.user-list__icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 18px;
+  height: 18px;
+
+  .user-list__shape {
+    fill: @elem-black;
+    fill-opacity: 0.2;
+  }
+}
+
+.user-list__icon--cart {
+  width: 21px;
 }
