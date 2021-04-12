@@ -1,3 +1,7 @@
+.promo {
+  margin-bottom: 36px;
+}
+
 .promo__wrapper {
   display: flex;
   flex-direction: column;
@@ -10,13 +14,14 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, auto);
     grid-template-rows: 62px repeat(5, 1fr);
   }
 }
 
 .promo__title {
   margin: 0;
+  margin-bottom: 10px;
   .font(@title-black, 25px, 30px, 700);
 
   @media (min-width: @tablet-width) {
@@ -35,6 +40,7 @@
 }
 
 .promo__time {
+  margin-bottom: 17px;
   .font (@accent, 17px, 20px, 700);
   text-transform: uppercase;
 
@@ -45,6 +51,7 @@
 
 .promo__text {
   margin: 0;
+  margin-bottom: 28px;
   .font(@basic-grey, 15px, 24px, 400);
 
   @media (min-width: @tablet-width) {
@@ -53,11 +60,14 @@
 
   @media (min-width: @desktop-width) {
     grid-area: ~"3 / 2 / 4 / 4";
-    padding-right: 86px;
+    padding-right: 130px;
   }
 }
 
 .promo__info {
+  margin: 0;
+  margin-bottom: 28px;
+
   @media (min-width: @tablet-width) {
     grid-column: ~"1 / 3";
   }
@@ -76,7 +86,7 @@
   border-bottom: 1px solid @menu-shadow;
 
   @media (min-width: @tablet-width) {
-  margin-right: 50px;
+    margin-right: 50px;
   }
 }
 
@@ -89,10 +99,12 @@
 }
 
 .promo__picture {
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
     grid-area: ~"2 / 3 / -1 / -1";
-    min-width: 334px;
-    min-height: 404px;
+    width: 334px;
+    height: 404px;
   }
 
   @media (min-width: @desktop-width) {
@@ -104,11 +116,12 @@
 
 .promo__img {
   // width: 100%;
-  // object-fit: cover;
+  margin-bottom: 26px;
 
   @media (min-width: @tablet-width) {
     width: 334px;
     height: 404px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -118,7 +131,10 @@
 }
 
 .promo__price {
+  margin: 0;
+  margin-bottom: 25px;
   .font(@basic-grey, 17px, 24px, 700);
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     grid-column: ~"1 / 3";
@@ -130,7 +146,8 @@
 }
 
 .promo__button {
-  max-width: 292px;
+  margin: 0 auto;
+  min-width: 260px;
 
   @media (min-width: @tablet-width) {
     grid-column: ~"1 / 3";

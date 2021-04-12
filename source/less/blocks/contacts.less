@@ -28,13 +28,11 @@
   .font(@title-black, 18px, 30px, 700);
 
   @media (min-width: @tablet-width) {
-    font-size: 43px;
-    line-height: 50px;
+    .size-line(43px, 50px);
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 53px;
-    line-height: 57px;
+    .size-line(53px, 57px);
   }
 }
 
@@ -58,7 +56,8 @@
 
 .contacts__item-title {
   margin: 0;
-  margin-right: 35px;
+  flex-basis: 80px;
+  flex-shrink: 0;
 }
 
 .contacts__item-description {
@@ -83,6 +82,8 @@
 .contacts__map {
   min-width: 320px;
   min-height: 454px;
+  background: url(../../img/map-mobile.png) no-repeat center center;
+  background-size: contain;
 
   @media (min-width: @desktop-width) {
     grid-area: ~"1 / 4 / -1 / -1";
