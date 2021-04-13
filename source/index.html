@@ -61,7 +61,7 @@
 
     <!-- MAIN -->
     <main class="page-main">
-      <h1 class="visually-hidden">Интернет-магазин «‎Мишка»: товары для дома ручной работы</h1>
+      <h1 class="visually-hidden">Интернет-магазин Мишка: товары для дома ручной работы</h1>
 
       <!-- PRODUCTS -->
       <section class="products">
@@ -118,11 +118,13 @@
               <dd class="promo__info-description">15 см</dd>
             </div>
           </dl>
-          <picture class="promo__picture">
-            <source media="(min-width: 1150px)" srcset="https://dummyimage.com/525x636/d9d9d9/8f8f8f">
-            <source media="(min-width: 768px)" srcset="https://dummyimage.com/334x404/d9d9d9/8f8f8f">
-            <img class="promo__img" src="https://dummyimage.com/260x315/d9d9d9/8f8f8f" width="260" height="315" alt="Двухцветные круглые вязаные корзинки">
-          </picture>
+          <div class="promo__picture-wrapper">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="https://dummyimage.com/525x636/d9d9d9/8f8f8f">
+              <source media="(min-width: 768px)" srcset="https://dummyimage.com/334x404/d9d9d9/8f8f8f">
+              <img class="promo__picture" src="https://dummyimage.com/260x315/d9d9d9/8f8f8f" width="260" height="315" alt="Двухцветные круглые вязаные корзинки">
+            </picture>
+          </div>
           <p class="promo__price">Цена: 990 руб.</p>
           <a class="button promo__button" href="#"><span>Заказать</span></a>
         </div>
@@ -213,11 +215,10 @@
             </div>
           </div>
           <div class="contacts__map">
+            <iframe class="contacts__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1618255825313!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
           <div class="contacts__wrapper-element contacts__wrapper-element-bottom">
-            <div class="contacts__feedback">
-              <a class="button contacts__write-us" href="#">Напишите нам</a>
-            </div>
+              <a class="button contacts__button" href="#">Напишите нам</a>
           </div>
         </div>
       </section>
