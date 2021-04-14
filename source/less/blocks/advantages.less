@@ -61,11 +61,35 @@
 
   &::before {
     .pseudo();
-    top: 0;
+    top: 3px;
     left: 0;
-    width: 50px;
+    width: 55px;
     height: 40px;
-    background-color: @accent;
+    background-repeat: no-repeat;
+  }
+
+  &--eco::before {
+    background-image: url("../../img/eco.svg");
+  }
+
+  &--price::before {
+    background-image: url("../../img/price.svg");
+  }
+
+  &--likes::before {
+    background-image: url("../../img/likes.svg");
+  }
+
+  &--craft::before {
+    background-image: url("../../img/craft.svg");
+  }
+
+  &--motherland::before {
+    background-image: url("../../img/motherland.svg");
+  }
+
+  &--gift::before {
+    background-image: url("../../img/gift.svg");
   }
 
   @media (min-width: @tablet-width) {
