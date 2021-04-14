@@ -1,6 +1,16 @@
 .reviews {
+  position: relative;
   padding-bottom: 55px;
   margin-bottom: 34px;
+
+  &:before {
+    .pseudo();
+    height: 6px;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    background: url("../../img/zigzag-line-desktop.svg") repeat-x;
+  }
 }
 .reviews__wrapper {
   display: flex;

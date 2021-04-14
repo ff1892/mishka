@@ -29,7 +29,7 @@
 }
 
 .contacts__wrapper-element-top {
-  margin-bottom: 26px;
+  margin-bottom: 60px;
 }
 
 .contacts__title {
@@ -62,22 +62,26 @@
 .contacts__item {
   .font(@basic-grey, 14px, 30px, 400);
   display: flex;
+  margin-bottom: 30px;
 }
 
 .contacts__item-title {
   margin: 0;
-  flex-basis: 77px;
+  margin-right: 10px;
+  flex-basis: 67px;
   flex-shrink: 0;
 }
 
 .contacts__item-description {
   margin: 0;
+  flex-grow: 1;
 }
 
 .contacts__item-description--email {
   color: @basic-grey;
   text-decoration: none;
   border-bottom: 1px solid @accent-email;
+  flex-grow: 0;
 
   &:hover {
     color: @accent-dark-hover;
@@ -90,7 +94,7 @@
 }
 
 .contacts__map {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
   min-width: 320px;
   min-height: 457px;
   background: url(../../img/map-mobile.png) no-repeat center;

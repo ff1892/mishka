@@ -1,9 +1,19 @@
 .advantages {
+  position: relative;
   padding-top: 43px;
   margin-bottom: 58px;
-}
-.advantages__wrapper {
 
+  &:before {
+    .pseudo();
+    height: 6px;
+    left: 0;
+    right: 0;
+    top: 6px;
+    background: url("../../img/zigzag-line-desktop.svg") repeat-x;
+  }
+}
+
+.advantages__wrapper {
   @media (min-width: @tablet-width) {
     max-width: 925px;
   }
