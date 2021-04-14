@@ -1,5 +1,12 @@
 .products {
   margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+    background: @bg-grey url("../../img/hero-tablet.jpg") no-repeat center top;
+    transform: translateY(-43px);
+    background-size: cover;
+  }
 }
 
 .products__wrapper {
@@ -10,6 +17,8 @@
 
   @media (min-width: @tablet-width) {
     background: none;
+    padding-top: 155px;
+    padding-bottom: 371px;
   }
 }
 
@@ -61,6 +70,10 @@
   text-decoration: none;
   height: 100%;
 
+  @media (min-width: @tablet-width) {
+    .size-line(20px, 30px);
+  }
+
   &:hover .products__icon-shape {
     opacity: 0.7;
   }
@@ -76,12 +89,16 @@
   padding: 22px 36px 20px 30px;
 
   @media (min-width: @tablet-width) {
-    padding: 25px 33px 27px 36px;
+    padding: 27px 33px 30px 36px;
   }
 }
 
 .products__link--toys .products__link-wrapper {
   padding-right: 28px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 34px;
+  }
 }
 
 .products__link-text {
