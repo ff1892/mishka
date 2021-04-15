@@ -1,7 +1,10 @@
 .main-nav {
   position: relative;
-  background-color: @bg-menu;
   min-height: 81px;
+
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(to bottom, white 67%, @bg-grey-light 67%)
+  }
 }
 
 
@@ -24,7 +27,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: flex-end;
-
+    background: transparent;
   }
 
   @media (min-width: @desktop-width) {

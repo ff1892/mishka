@@ -1,11 +1,20 @@
 .products {
+  position: relative;
   margin-bottom: 31px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 10px;
-    background: @bg-grey url("../../img/hero-tablet.jpg") no-repeat center top;
-    transform: translateY(-43px);
+    margin-bottom: 52px;
+    background: @bg-grey-light url("../../img/hero-tablet.jpg") no-repeat center bottom;
     background-size: cover;
+
+    &::before {
+      .pseudo();
+      height: 24px;
+      left: 0;
+      right: 0;
+      bottom: -12px;
+      background: url("../../img/zigzag-fill-tablet.png") repeat-x;
+    }
   }
 }
 
@@ -17,7 +26,7 @@
 
   @media (min-width: @tablet-width) {
     background: none;
-    padding-top: 155px;
+    padding-top: 112px;
     padding-bottom: 371px;
   }
 }

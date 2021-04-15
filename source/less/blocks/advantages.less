@@ -10,6 +10,12 @@
     right: 0;
     top: 6px;
     background: url("../../img/zigzag-line-desktop.svg") repeat-x;
+
+    @media (min-width: @tablet-width) {
+      height: 17px;
+      top: 19px;
+      background-size: cover;
+    }
   }
 }
 
@@ -25,6 +31,21 @@
   }
 }
 
+.advantages__title {
+  margin: 0;
+  margin-bottom: 28px;
+  .font(@title-black, 25px, 30px, 700);
+
+  @media (min-width: @tablet-width) {
+    .size-line(43px, 50px);
+    margin: 50px 0 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: ~"2 / 6";
+  }
+}
+
 .advantages__list {
   .list-reset();
 
@@ -34,16 +55,6 @@
     grid-template-rows: repeat(3, auto);
     grid-auto-flow: column;
   }
-
-  @media (min-width: @desktop-width) {
-    grid-column: ~"2 / 6";
-  }
-}
-
-.advantages__title {
-  margin: 0;
-  margin-bottom: 28px;
-  .font(@title-black, 25px, 30px, 700);
 
   @media (min-width: @desktop-width) {
     grid-column: ~"2 / 6";
@@ -101,4 +112,8 @@
 .advantages__description {
   margin: 0;
   .font(@title-black, 17px, 20px, 700);
+
+  @media (min-width: @tablet-width) {
+    .size-line(20px, 22px);
+  }
 }
