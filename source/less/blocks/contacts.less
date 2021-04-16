@@ -1,5 +1,19 @@
 .contacts {
+  position: relative;
   margin-bottom: 40px;
+  padding-top: 153px;
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      .pseudo();
+      height: 17px;
+      left: 0;
+      right: 0;
+      top: 67px;
+      background: url("../../img/zigzag-line-desktop.svg") repeat-x;
+      background-size: cover;
+    }
+  }
 }
 
 .contacts__wrapper {
@@ -29,6 +43,7 @@
 }
 
 .contacts__wrapper-element-top {
+  position: relative;
   margin-bottom: 60px;
 }
 
