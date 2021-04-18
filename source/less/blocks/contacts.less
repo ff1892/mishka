@@ -15,6 +15,7 @@
   @media (min-width: @tablet-width) {
     padding-top: 153px;
     margin-bottom: 57px;
+
     &::before {
       .pseudo();
       height: 17px;
@@ -23,6 +24,31 @@
       top: 67px;
       background: url("../../img/zigzag-line-desktop.svg") repeat-x;
       background-size: contain;
+    }
+
+    &::after {
+      .pseudo();
+      width: 47px;
+      height: 81px;
+      right: 53px;
+      top: 130px;
+      background: url("../../img/flag.svg") no-repeat;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 162px;
+    margin-bottom: 50px;
+
+    &::before {
+      left: 50px;
+      right: 50px;
+      top: 70px;
+    }
+
+    &:after {
+      top: 224px;
+      left: 113px;
     }
   }
 }
@@ -34,7 +60,7 @@
     padding: 0 50px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: min-content min-content;
   }
 }
 
@@ -49,7 +75,6 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     grid-column: ~"2 / 4";
-    align-self: flex-end;
   }
 }
 
@@ -60,13 +85,22 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 17px;
   }
+
+  @media (min-width: @desktop-width) {
+      grid-area: ~"1 / 2 / 2 / 4";
+      margin-top: 80px;
+  }
 }
 
 .contacts__wrapper-element-bottom {
 
   @media (min-width: @tablet-width) {
-    display: flex;
+    text-align: center;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-area: ~"2 / 2 / 3 / 4";
+}
 }
 
 .contacts__title {
@@ -81,6 +115,7 @@
 
   @media (min-width: @desktop-width) {
     .size-line(53px, 57px);
+    margin-bottom: 34px;
   }
 }
 
@@ -104,6 +139,12 @@
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
+
+  @media (min-width: @desktop-width) {
+    &:last-child {
+      margin-bottom: 13px;
+    }
+  }
   }
 }
 
@@ -139,15 +180,18 @@
   margin-bottom: 40px;
   min-width: 320px;
   min-height: 457px;
-  background: url(../../img/map-mobile.png) no-repeat center;
+  background: @bg-grey url(../../img/map-mobile.png) no-repeat center;
   background-size: contain;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 52px;
+    background: @bg-grey url(../../img/map-tablet.png) no-repeat center;
+    background-size: contain;
   }
 
   @media (min-width: @desktop-width) {
     grid-area: ~"1 / 4 / -1 / -1";
+    background-size: cover;
   }
 }
 
@@ -158,9 +202,13 @@
 
 .contacts__button {
   @media (min-width: @tablet-width) {
-    display: inline-block;
+    margin: 0 219px;
     font-size: 17px;
-    padding-left: 39px;
-    padding-right: 39px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 120px 0 0;
   }
 }

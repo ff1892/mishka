@@ -8,12 +8,11 @@
     flex-basis: 425px;
     flex-shrink: 0;
     padding-left: 50px;
-    padding-top: 10px;
-    height: 50%;
   }
 
   @media (min-width: @desktop-width) {
     order: 1;
+    align-self: stretch;
   }
 }
 
@@ -30,7 +29,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 33px;
+    padding-right: 34px;
+    padding-top: 3px;
 
     &:first-child {
       border-right: 1px solid fade(@elem-black, 10%);
@@ -57,7 +57,7 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     font-size: 17px;
-    padding-top: 28px;
+    padding-top: 30px;
     padding-bottom: 26px;
   }
 }
