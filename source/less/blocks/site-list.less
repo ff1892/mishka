@@ -29,15 +29,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 34px;
     padding-top: 3px;
+    margin-right: 0;
 
     &:first-child {
       border-right: 1px solid fade(@elem-black, 10%);
-    }
-
-    &:last-child {
-      padding-right: 0;
     }
   }
 }
@@ -57,7 +53,17 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     font-size: 17px;
-    padding-top: 30px;
-    padding-bottom: 26px;
+    padding: 30px 34px 26px 35px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .site-list__item:first-child .site-list__link {
+    padding-left: 0;
+  }
+
+  .site-list__item:last-child .site-list__link {
+    padding-right: 0;
   }
 }

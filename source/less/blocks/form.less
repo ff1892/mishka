@@ -13,6 +13,59 @@
   }
 }
 
+// RADIO
+
+.form__fieldset--radio  {
+
+  & .form__legend {
+    margin-bottom: 29px;
+  }
+
+  & .form__item {
+    margin-bottom: 10px;
+  }
+
+  & .form__label {
+    position: relative;
+    min-height: 42px;
+    padding: 6px 0 0 60px;
+  }
+
+  & .form__label--oneline {
+    padding-top: 12px;
+  }
+
+  & .form__label:before {
+    .pseudo();
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid @basic-grey;
+  }
+
+  & .form__label:hover:before {
+    border-color: @accent-input;
+  }
+
+  & .form__label:active:before {
+    border-color: @black-30;
+  }
+
+  & .form__input:checked + .form__label:after {
+    .pseudo();
+    top: 12px;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: @accent-input;
+  }
+}
+
+
+
 .form__fieldset--customer-phone,
 .form__fieldset--customer-email,
 .form__fieldset--textarea {
@@ -54,6 +107,9 @@
 
 .form__label {
   .font(@form-black, 17px, 18px, 700);
+  display: block;
+  cursor: pointer;
+  user-select: none;
 }
 
 .form__list {
