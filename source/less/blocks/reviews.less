@@ -2,16 +2,7 @@
   margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 83px;
     margin-bottom: 0;
-    padding-bottom: 19px;
-    background: url(../../img/review.png) left top no-repeat;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 66px;
-    padding-top: 77px;
-    background-position: 50px top;
   }
 }
 
@@ -23,10 +14,15 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, min-content);
+    padding-top: 83px;
+    padding-bottom: 19px;
+    background: url(../../img/review.png) left top no-repeat;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(6, 1fr);
+    padding-bottom: 66px;
+    padding-top: 77px;
   }
 }
 
