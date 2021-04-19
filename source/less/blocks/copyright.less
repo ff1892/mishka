@@ -9,10 +9,20 @@
   .font(@title-black, 19px, 18px, 700);
 }
 
-.copyright__logo {
+.copyright__link {
   margin-left: 20px;
 
   @media (min-width: @tablet-width) {
     margin-left: 15px;
+  }
+}
+
+.copyright__link {
+  &:hover path {
+    fill: @accent-dark-hover;
+  }
+
+  &:active path {
+    fill: fade(@accent-dark-hover, 30%);
   }
 }
