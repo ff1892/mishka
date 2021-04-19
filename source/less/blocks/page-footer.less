@@ -3,10 +3,15 @@
 }
 
 .page-footer__wrapper {
+  padding-top: 26px;
+  padding-bottom: 20px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    padding-top: 49px;
+    padding-bottom: 55px;
   }
 }
 
@@ -15,5 +20,17 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+  }
+}
+
+.page-footer__social {
+  padding-bottom: 22px;
+  margin-bottom: 21px;
+  border-bottom: 1px solid @border-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
   }
 }

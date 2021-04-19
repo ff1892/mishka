@@ -2,6 +2,7 @@
   .list-reset();
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .social__item {
@@ -10,4 +11,14 @@
 
 .social__item:last-child {
   margin-right: 0;
+}
+
+.social__icon {
+  &:hover path {
+    fill: @accent-dark-hover;
+  }
+
+  &:active path {
+    fill: fade(@accent-dark-hover, 30%);
+  }
 }

@@ -18,6 +18,11 @@
   font-weight: @font-weight;
 }
 
+.size-line (@font-size, @line-height) {
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
 .text-link() {
   text-decoration: none;
   color: @link-black;
@@ -29,4 +34,20 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.push-auto() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pseudo(@display: block, @position: absolute, @content: "") {
+  display: @display;
+  position: @position;
+  content: "";
+}
+
+.out() {
+  outline: 1px solid tomato;
+  outline-offset: -1px;
 }

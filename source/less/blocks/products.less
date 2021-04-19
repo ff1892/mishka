@@ -1,6 +1,65 @@
+.products {
+  position: relative;
+  margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 52px;
+    background: @bg-grey-light url("../img/hero-tablet.jpg") no-repeat center bottom;
+
+    &::before {
+      .pseudo();
+      height: 24px;
+      left: 0;
+      right: 0;
+      bottom: -12px;
+      background: url("../img/zigzag-fill-tablet.svg") repeat-x;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
+    background: @bg-grey-light url("../img/hero-desktop.jpg") no-repeat center bottom;
+
+    &::before {
+      .pseudo();
+      height: 34px;
+      left: 0;
+      right: 0;
+      bottom: -16px;
+      background: url("../img/zigzag-fill-desktop.svg") repeat-x;
+    }
+  }
+}
+
+.products__wrapper {
+  padding-top: 70px;
+  padding-bottom: 120px;
+  background: @bg-grey-light url("../img/hero-mobile.jpg") no-repeat center -20px;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+    padding-top: 112px;
+    padding-bottom: 371px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 357px;
+  }
+}
+
 .products__title {
+  margin: 0 auto;
+  min-height: 90px;
   .font(@title-black, 27px, 30px, 700);
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .size-line(43px, 50px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .size-line(53px, 57px);
+  }
 }
 
 .products__list {
@@ -20,14 +79,55 @@
 
 .products__item {
   @media (min-width: @tablet-width) {
-    flex-grow: 1;
+    flex-basis: 50%;
+  }
+
+  &:last-child {
+    @media (max-width: @mobile-width-only) {
+      box-shadow: 0 4px 4px @black-25;
+    }
   }
 }
 
 .products__link {
   display: block;
-  .font(#fff, 19px, 24px, 700);
+  .font(@font-light, 19px, 24px, 700);
   text-decoration: none;
+  height: 100%;
+
+  @media (min-width: @tablet-width) {
+    .size-line(20px, 30px);
+  }
+
+  &:hover .products__icon-shape {
+    opacity: 0.7;
+  }
+
+  &:active .products__icon-shape {
+    opacity: 0.3;
+  }
+}
+
+.products__link-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 36px 20px 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 27px 33px 30px 36px;
+  }
+}
+
+.products__link--toys .products__link-wrapper {
+  padding-right: 28px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 34px;
+  }
+}
+
+.products__link-text {
+  max-width: 175px;
 }
 
 .products__link--interior {
