@@ -2,7 +2,7 @@
   position: relative;
   margin-bottom: 31px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-bottom: 52px;
     background: @bg-grey-light url("../img/hero-tablet.jpg") no-repeat center bottom;
 
@@ -16,7 +16,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin-bottom: 60px;
     background: @bg-grey-light url("../img/hero-desktop.jpg") no-repeat center bottom;
 
@@ -36,13 +36,13 @@
   padding-bottom: 120px;
   background: @bg-grey-light url("../img/hero-mobile.jpg") no-repeat center -20px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     background: none;
     padding-top: 112px;
     padding-bottom: 371px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding-bottom: 357px;
   }
 }
@@ -53,11 +53,11 @@
   .font(@title-black, 27px, 30px, 700);
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .size-line(43px, 50px);
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .size-line(53px, 57px);
   }
 }
@@ -66,19 +66,19 @@
   .list-reset();
   min-width: 320px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: flex;
     padding: 0 50px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin: 0 auto;
     max-width: @desktop-width;
   }
 }
 
 .products__item {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     flex-basis: 50%;
   }
 
@@ -95,7 +95,7 @@
   text-decoration: none;
   height: 100%;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .size-line(20px, 30px);
   }
 
@@ -113,7 +113,7 @@
   justify-content: space-between;
   padding: 22px 36px 20px 30px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding: 27px 33px 30px 36px;
   }
 }
@@ -121,7 +121,7 @@
 .products__link--toys .products__link-wrapper {
   padding-right: 28px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding-right: 34px;
   }
 }

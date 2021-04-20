@@ -1,21 +1,62 @@
+.form__wrapper {
+  @media @desktop {
+    padding-right: 225px;
+  }
+}
+
 .form__fieldset {
   border: none;
   margin: 0;
   padding: 0;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: flex;
     align-items: baseline;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin-left: 62px;
   }
+}
+
+.form__background-fieldset {
+  @media @tablet {
+    background-color: @bg-grey;
+  }
+}
+
+.form__legend {
+  .font(@accent, 17px, 16px, 700);
+  text-transform: uppercase;
+  margin: 0;
+
+  @media @tablet {
+    flex-basis: 167px;
+    flex-shrink: 0;
+  }
+
+  @media @desktop {
+    flex-basis: 113px;
+    flex-shrink: 0;
+  }
+}
+
+.form__label {
+  .font(@form-black, 17px, 18px, 700);
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form__list {
+  .list-reset();
 }
 
 // RADIO
 
 .form__fieldset--radio {
+  margin-bottom: 22px;
+
   .form__legend {
     margin-bottom: 29px;
   }
@@ -63,85 +104,87 @@
   }
 }
 
+// CHECKBOX
+
+.form__fieldset--checkbox {
+  margin-bottom: 11px;
+
+  .form__list {
+    @media @tablet {
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: 500px;
+    }
+
+    @media @desktop {
+      flex-basis: 750px;
+    }
+  }
+
+  .form__legend {
+    margin-bottom: 24px;
+  }
+
+  .form__item {
+    margin-bottom: 23px;
+
+    @media @tablet {
+      flex-basis: 235px;
+    }
+  }
+
+  .form__label {
+    position: relative;
+    min-height: 38px;
+    padding: 10px 0 10px 60px;
+  }
+
+  .form__label::before {
+    .pseudo();
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border: 2px solid @basic-grey;
+  }
+
+  .form__input:checked + .form__label::after {
+    .pseudo();
+    top: 9px;
+    left: 8px;
+    width: 23px;
+    height: 13px;
+    border: 2px solid @elem-black;
+    transform: rotate(-45deg);
+    border-top: none;
+    border-right: none;
+  }
+}
+
 .form__fieldset--customer-phone,
 .form__fieldset--customer-email,
 .form__fieldset--textarea {
   display: flex;
   flex-direction: column;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     flex-direction: row;
   }
 }
 
-.form__background-fieldset {
-  @media (min-width: @tablet-width) {
-    background-color: @bg-grey;
-  }
-}
-
-.form__wrapper {
-  @media (min-width: @desktop-width) {
-    padding-right: 225px;
-  }
-}
-
-.form__legend {
-  .font(@accent, 17px, 16px, 700);
-  text-transform: uppercase;
-  margin: 0;
-
-  @media (min-width: @tablet-width) {
-    flex-basis: 167px;
-    flex-shrink: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    flex-basis: 113px;
-    flex-shrink: 0;
-  }
-}
-
-.form__label {
-  .font(@form-black, 17px, 18px, 700);
-  display: block;
-  cursor: pointer;
-  user-select: none;
-}
-
-.form__list {
-  .list-reset();
-}
-
-.form__list--checkbox {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 500px;
-  }
-
-  @media (min-width: @desktop-width) {
-    flex-basis: 750px;
-  }
-}
-
 .form__list--text {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     flex-grow: 1;
   }
 }
 
-.form__item--checkbox {
-  @media (min-width: @tablet-width) {
-    flex-basis: 235px;
-  }
-}
+
 
 .form__item--text {
   display: flex;
   flex-direction: column;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     flex-direction: row;
   }
 }
@@ -165,7 +208,7 @@
     outline: 0;
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     flex-grow: 1;
   }
 }
@@ -188,7 +231,7 @@
     outline: 0;
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     flex-grow: 1;
     height: 142px;
   }
@@ -198,13 +241,13 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding-left: 175px;
   }
 }
@@ -218,7 +261,7 @@
   font-family: "Open Sans", "Arial", sans-serif;
   align-self: center;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     order: 2;
   }
 }
