@@ -12,7 +12,7 @@
     background: url("../img/zigzag-line-desktop.svg") repeat-x;
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding-top: 153px;
     margin-bottom: 57px;
 
@@ -26,7 +26,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding-top: 0;
     margin-bottom: 50px;
 
@@ -37,7 +37,7 @@
 }
 
 .contacts__wrapper {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     position: relative;
 
     &::before {
@@ -50,7 +50,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     max-width: @desktop-width;
     margin: 0 auto;
     padding: 162px 50px 0 50px;
@@ -79,11 +79,11 @@
   min-width: 320px;
   padding: 0 30px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding: 0 50px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding: 0;
     grid-column: ~"2 / 4";
   }
@@ -93,22 +93,22 @@
   position: relative;
   margin-bottom: 60px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-bottom: 17px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     grid-area: ~"1 / 2 / 2 / 4";
     margin-top: 80px;
   }
 }
 
 .contacts__wrapper-element-bottom {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     text-align: center;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     grid-area: ~"2 / 2 / 3 / 4";
   }
 }
@@ -118,25 +118,25 @@
   margin-bottom: 28px;
   .font(@title-black, 18px, 30px, 700);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .size-line(43px, 50px);
     margin-bottom: 50px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .size-line(53px, 57px);
     margin-bottom: 34px;
   }
 }
 
 .contacts__info {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: flex-start;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
   }
@@ -147,11 +147,11 @@
   display: flex;
   margin-bottom: 30px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     font-size: 17px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     &:last-child {
       margin-bottom: 13px;
     }
@@ -193,13 +193,13 @@
   background: @bg-grey url("../img/map-mobile.png") no-repeat center;
   background-size: contain;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-bottom: 52px;
     background: @bg-grey url("../img/map-tablet.png") no-repeat center;
     background-size: contain;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     grid-area: ~"1 / 4 / -1 / -1";
     background-size: cover;
   }
@@ -211,14 +211,14 @@
 }
 
 .contacts__button {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin: 0 219px;
     font-size: 17px;
     padding-left: 38px;
     padding-right: 38px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin: 0 120px 0 0;
   }
 }

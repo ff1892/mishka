@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     flex-direction: row;
   }
 }
@@ -11,20 +11,20 @@
   display: flex;
   align-items: center;
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     flex-direction: column;
     align-items: flex-start;
   }
 }
 
 .production__title-wrapper--top {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: none;
   }
 }
 
 .production__title-wrapper--bottom {
-  @media (max-width: @mobile-width-only) {
+  @media @mobile {
     display: none;
   }
 }
