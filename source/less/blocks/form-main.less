@@ -18,6 +18,16 @@
       background: url("../img/zigzag-fill-tablet.svg") repeat-x;
     }
   }
+
+  @media @desktop {
+    padding-bottom: 113px;
+    margin-bottom: 99px;
+
+    &::before {
+      height: 34px;
+      background: url("../img/zigzag-fill-desktop.svg") repeat-x;
+    }
+  }
 }
 
 .form-main__title {
@@ -28,6 +38,10 @@
 
   @media @tablet {
     .size-line(43px, 50px);
+  }
+
+  @media @desktop {
+    .size-line(53px, 57px);
   }
 }
 
@@ -44,7 +58,6 @@
   }
 
   @media @desktop {
-    margin: 0;
     padding-left: 175px;
     padding-right: 175px;
   }
