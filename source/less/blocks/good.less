@@ -31,7 +31,7 @@
 }
 
 .good__description {
-  padding: 27px 0 26px 27px;
+  padding: 25px 0 26px 27px;
   border: 1px solid @menu-shadow;
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
     display: flex;
@@ -80,5 +80,9 @@
   &:hover {
     fill-opacity: 1;
     fill: @accent;
+  }
+
+  &:active {
+    fill: fade(@accent, 30%)
   }
 }
