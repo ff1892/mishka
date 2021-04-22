@@ -1,14 +1,17 @@
 .catalog {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   @media @desktop {
+    display: flex;
     flex-direction: row;
   }
 }
 
 .catalog__item {
+  margin-bottom: 29px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media @desktop {
     margin-right: 51px;
   }

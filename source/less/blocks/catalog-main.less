@@ -1,8 +1,45 @@
 .catalog-main__background {
   background-color: @bg-grey;
+  padding-top: 72px;
+  padding-bottom: 73px;
+  margin-bottom: 29px;
+
+  @media @tablet {
+    position: relative;
+    padding-top: 58px;
+    padding-bottom: 85px;
+
+    &::before {
+      .pseudo();
+      height: 24px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("../img/zigzag-fill-tablet.svg") repeat-x;
+    }
+  }
+
+  @media @desktop {
+    padding-bottom: 113px;
+    margin-bottom: 99px;
+
+    &::before {
+      height: 34px;
+      background: url("../img/zigzag-fill-desktop.svg") repeat-x;
+    }
+  }
 }
 
 .catalog-main__title {
   .font(@title-black, 27px, 30px, 700);
+  margin: 0;
   text-align: center;
+
+  @media @tablet {
+    .size-line(43px, 50px);
+  }
+
+  @media @desktop {
+    .size-line(53px, 57px);
+  }
 }
