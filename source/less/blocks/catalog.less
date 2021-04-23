@@ -1,8 +1,13 @@
 .catalog {
   margin-bottom: 31px;
 
+  @media @tablet {
+    margin-bottom: 55px;
+  }
+
   @media @desktop {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -14,10 +19,11 @@
   }
 
   @media @tablet {
-    margin-bottom: 20px;
+    margin-bottom: 54px;
   }
 
   @media @desktop {
+    margin-bottom: 0;
     margin-right: 51px;
   }
 }

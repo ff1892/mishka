@@ -1,7 +1,11 @@
 .good {
   @media @tablet {
     display: flex;
-    min-width: 668px;
+  }
+
+  @media @desktop {
+    flex-direction: column;
+    flex-basis: 316px;
   }
 }
 
@@ -9,6 +13,16 @@
   display: block;
   min-width: 260px;
   min-height: 195px;
+
+  @media @tablet {
+    flex-basis: 334px;
+    flex-grow: 1;
+  }
+
+  @media @desktop {
+    flex-basis: 462px;
+    flex-grow: 0;
+  }
 }
 
 .good__picture {
@@ -17,28 +31,23 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-
-  @media @tablet {
-    width: 334px;
-    height: 334px;
-  }
-
-  @media @desktop {
-    width: 316px;
-    height: 462px;
-  }
 }
 
 .good__description {
-  padding: 25px 0 26px 27px;
-  border: 1px solid @menu-shadow;
+  padding: 25px 0 27px 27px;
+  box-shadow:inset 0px 0px 0px 1px @menu-shadow;
 
   @media @tablet {
-    padding: 27px 0 26px 32px;
+    padding: 28px 0 24px 33px;
+    flex-basis: 335px;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    min-width: 334px;
-    flex-grow: 1;
+  }
+
+  @media @desktop {
+    padding: 28px 0 24px 27px;
+    flex-basis: 197px;
   }
 }
 
@@ -64,6 +73,10 @@
   @media @tablet {
     font-size: 15px;
   }
+
+  @media @desktop {
+    margin-bottom: 0;
+  }
 }
 
 .good__price {
@@ -83,8 +96,9 @@
   margin-right: 28px;
   border-top: 1px solid @menu-shadow;
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+  @media @tablet {
     margin-top: auto;
+    margin-right: 31px;
   }
 }
 
