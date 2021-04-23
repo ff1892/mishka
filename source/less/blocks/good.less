@@ -1,8 +1,7 @@
 .good {
-  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+  @media @tablet {
     display: flex;
-    width: 668px;
-    margin-bottom: 20px;
+    min-width: 668px;
   }
 }
 
@@ -33,10 +32,13 @@
 .good__description {
   padding: 25px 0 26px 27px;
   border: 1px solid @menu-shadow;
-  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+
+  @media @tablet {
+    padding: 27px 0 26px 32px;
     display: flex;
     flex-direction: column;
-    width: 334px;
+    min-width: 334px;
+    flex-grow: 1;
   }
 }
 
@@ -48,17 +50,29 @@
 .good__title-link {
   .font-size(17px, 24px, 700);
   .text-link();
+
+  @media @tablet {
+    font-size: 20px;
+  }
 }
 
 .good__info {
   margin: 0;
   margin-bottom: 18px;
   .font(@basic-grey, 13px, 30px, 400);
+
+  @media @tablet {
+    font-size: 15px;
+  }
 }
 
 .good__price {
   margin: 0;
   .font(@catalog-black, 15px, 24px, 700);
+
+  @media @tablet {
+    font-size: 17px;
+  }
 }
 
 .good__order {

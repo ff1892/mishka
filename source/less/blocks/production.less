@@ -9,17 +9,20 @@
   margin-bottom: 26px;
   display: flex;
   align-items: center;
-}
 
-.production__icon {
-  width: 32px;
-  height: 22px;
-  margin-right: 25px;
+  &::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 22px;
+    flex-shrink: 0;
+    margin-right: 25px;
+    background: url("../img/video.svg");
+  }
 }
 
 .production__title {
   margin: 0;
-
   .font(@title-black, 17px, 24px, 700);
 }
 
