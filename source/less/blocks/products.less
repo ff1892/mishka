@@ -19,14 +19,17 @@
   @media @desktop {
     margin-bottom: 60px;
     background: @bg-grey-light url("../img/hero-desktop.jpg") no-repeat center bottom;
+    overflow-x: hidden;
+    // SCROLL BUG =============================================
 
     &::before {
       .pseudo();
       height: 34px;
-      left: 0;
-      right: 0;
+      left: -50px;
+      right: -50px;
       bottom: -16px;
-      background: url("../img/zigzag-fill-desktop.svg") repeat-x;
+      background: url("../img/zigzag-fill-desktop.svg");
+      background-size: cover;
     }
   }
 }
