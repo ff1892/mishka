@@ -16,7 +16,12 @@
     grid-template-rows: repeat(3, min-content);
     padding-top: 83px;
     padding-bottom: 19px;
-    background: url("../img/review.png") left top no-repeat;
+    background: url("../img/review.jpg") left top no-repeat;
+
+    @media @retina {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 
   @media @desktop {

@@ -14,22 +14,34 @@
       bottom: -12px;
       background: url("../img/zigzag-fill-tablet.svg") repeat-x;
     }
+
+    @media @retina {
+      background-image: url("../img/hero-tablet@2x.jpg");
+      background-size: @tablet-width auto;
+    }
   }
 
   @media @desktop {
     margin-bottom: 60px;
     background: @bg-grey-light url("../img/hero-desktop.jpg") no-repeat center bottom;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     // SCROLL BUG =============================================
 
     &::before {
       .pseudo();
       height: 34px;
-      left: -50px;
-      right: -50px;
+      // left: -50px;
+      // right: -50px;
+      left: 0;
+      bottom: 0;
       bottom: -16px;
       background: url("../img/zigzag-fill-desktop.svg");
       background-size: cover;
+    }
+
+    @media @retina {
+      background-image: url("../img/hero-desktop@2x.jpg");
+      background-size: @desktop-width auto;
     }
   }
 }
@@ -38,6 +50,11 @@
   padding-top: 70px;
   padding-bottom: 120px;
   background: @bg-grey-light url("../img/hero-mobile.jpg") no-repeat center -20px;
+
+  @media @retina {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: @mobile-width auto;
+  }
 
   @media @tablet {
     background: none;
