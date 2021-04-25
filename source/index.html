@@ -134,7 +134,7 @@
             </picture>
           </div>
           <p class="promo__price">Цена: 990 руб.</p>
-          <a class="button promo__button" href="#"><span>Заказать</span></a>
+          <a class="button promo__button buy" href="#"><span>Заказать</span></a>
         </div>
       </section>
 
@@ -274,6 +274,33 @@
         </div>
       </div>
     </footer>
+    <div class="overlay"></div>
+    <section class="size">
+      <div class="size__container">
+        <form class="size__form" method="GET" action="https://echo.htmlacademy.ru" target="_blank">
+          <h2 class="size__title">Добавить в&nbsp;корзину</h2>
+          <fieldset class="size__fieldset">
+            <legend class="size__legend">Выберите размер:</legend>
+            <ul class="size__list">
+              <li class="size__item">
+                <input class="size__input visually-hidden" type="radio" name="size" id="size-small" value="small" checked>
+                <label class="size__label" for="size-small">s</label>
+              </li>
+              <li class="size__item">
+                <input class="size__input visually-hidden" type="radio" name="size" id="size-medium" value="medium">
+                <label class="size__label" for="size-medium">m</label>
+              </li>
+              <li class="size__item">
+                <input class="size__input visually-hidden" type="radio" name="size" id="size-large" value="large">
+                <label class="size__label" for="size-large">l</label>
+              </li>
+            </ul>
+            <input class="size__submit" type="submit" value="Добавить" aria-label="Добавить товар в корзину">
+          </fieldset>
+        </form>
+      </div>
+    </section>
     <script src="js/mobile-menu.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

@@ -1,4 +1,14 @@
 .good {
+
+  &:hover .good__description{
+    box-shadow: 0 6px 10px 0 fade(@catalog-black, 10%);
+  }
+
+  &:active .good__description {
+    box-shadow: 0 3px 5px 0 fade(@catalog-black, 10%);
+  }
+
+
   @media @tablet {
     display: flex;
   }
