@@ -24,19 +24,15 @@
   @media @desktop {
     margin-bottom: 60px;
     background: @bg-grey-light url("../img/hero-desktop.jpg") no-repeat center bottom;
-    overflow-x: hidden;
-    // SCROLL BUG =============================================
+    overflow: hidden;
 
     &::before {
       .pseudo();
       height: 34px;
       left: -50px;
       right: -50px;
-      // left: 0;
-      // right: 0;
       bottom: -16px;
-      background: url("../img/zigzag-fill-desktop.svg");
-      background-size: cover;
+      background: url("../img/zigzag-fill-desktop.svg") repeat-x;
     }
 
     @media @retina {
