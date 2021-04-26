@@ -1,54 +1,125 @@
 .good {
-  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+  &:hover .good__description {
+    box-shadow: 0 6px 10px 0 fade(@catalog-black, 10%);
+  }
+
+  &:active .good__description {
+    box-shadow: 0 3px 5px 0 fade(@catalog-black, 10%);
+  }
+
+
+  @media @tablet {
     display: flex;
-    width: 668px;
-    margin-bottom: 20px;
+  }
+
+  @media @desktop {
+    flex-direction: column;
+    flex-basis: 316px;
+  }
+}
+
+.good__picture-link {
+  display: block;
+  min-width: 260px;
+  min-height: 195px;
+
+  @media @tablet {
+    flex-basis: 334px;
+    flex-grow: 1;
+  }
+
+  @media @desktop {
+    flex-basis: 462px;
+    flex-grow: 0;
   }
 }
 
 .good__picture {
   background-color: @bg-grey;
   display: block;
+  width: 100%;
+  height: auto;
   object-fit: cover;
-
-  @media (min-width: @tablet-width) {
-    width: 334px;
-    height: 334px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 316px;
-    height: 462px;
-  }
 }
 
 .good__description {
-  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+  padding: 25px 0 27px 27px;
+  box-shadow: inset 0 0 0 1px @menu-shadow;
+
+  @media @tablet {
+    padding: 28px 0 24px 33px;
+    flex-basis: 335px;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    width: 334px;
   }
+
+  @media @desktop {
+    padding: 28px 0 24px 27px;
+    flex-basis: 197px;
+  }
+}
+
+.good__title {
+  margin: 0;
+  margin-bottom: 5px;
 }
 
 .good__title-link {
   .font-size(17px, 24px, 700);
   .text-link();
+
+  @media @tablet {
+    font-size: 20px;
+  }
 }
 
 .good__info {
+  margin: 0;
+  margin-bottom: 18px;
   .font(@basic-grey, 13px, 30px, 400);
+
+  @media @tablet {
+    font-size: 15px;
+  }
+
+  @media @desktop {
+    margin-bottom: 0;
+  }
 }
 
 .good__price {
+  margin: 0;
   .font(@catalog-black, 15px, 24px, 700);
+
+  @media @tablet {
+    font-size: 17px;
+  }
 }
 
 .good__order {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 23px;
+  margin-right: 28px;
+  border-top: 1px solid @menu-shadow;
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+  @media @tablet {
     margin-top: auto;
+    margin-right: 31px;
+  }
+}
+
+.good__cart-icon {
+  fill-opacity: 0.2;
+
+  &:hover {
+    fill-opacity: 1;
+    fill: @accent;
+  }
+
+  &:active {
+    fill: fade(@accent, 30%);
   }
 }

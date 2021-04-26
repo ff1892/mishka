@@ -3,6 +3,31 @@
   padding-top: 72px;
   padding-bottom: 73px;
   margin-bottom: 17px;
+
+  @media @tablet {
+    position: relative;
+    padding-top: 58px;
+    padding-bottom: 85px;
+
+    &::before {
+      .pseudo();
+      height: 24px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("../img/zigzag-fill-tablet.svg") repeat-x;
+    }
+  }
+
+  @media @desktop {
+    padding-bottom: 113px;
+    margin-bottom: 99px;
+
+    &::before {
+      height: 34px;
+      background: url("../img/zigzag-fill-desktop.svg") repeat-x;
+    }
+  }
 }
 
 .form-main__title {
@@ -10,6 +35,14 @@
   margin: 0;
   padding: 0;
   text-align: center;
+
+  @media @tablet {
+    .size-line(43px, 50px);
+  }
+
+  @media @desktop {
+    .size-line(53px, 57px);
+  }
 }
 
 .form-main__intro {
@@ -17,14 +50,23 @@
   margin-bottom: 31px;
   .font(@basic-grey, 13px, 24px, 400);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
+    margin-top: 56px;
+    margin-bottom: 61px;
     font-size: 17px;
     line-height: 30px;
   }
 
-  @media (min-width: @desktop-width) {
-    margin: 0;
+  @media @desktop {
     padding-left: 175px;
     padding-right: 175px;
+  }
+}
+
+.form-main__form {
+  margin-bottom: 54px;
+
+  @media @tablet {
+    margin-bottom: 50px;
   }
 }

@@ -3,12 +3,12 @@
   padding-top: 43px;
   margin-bottom: 58px;
 
-  @media (min-width: @tablet-width) {
-    padding-top: 0;
+  @media @tablet {
     margin-bottom: 26px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
+    padding-top: 0;
     margin-bottom: 32px;
   }
 
@@ -20,29 +20,29 @@
     top: 6px;
     background: url("../img/zigzag-line-desktop.svg") repeat-x;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       height: 17px;
       top: 19px;
-      background-size: contain;
+      background: url("../img/zigzag-line-tablet.svg");
     }
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       display: none;
       height: 32px;
       top: 40px;
       left: 50px;
       right: 50px;
-      background-size: contain;
+      background: url("../img/zigzag-line-desktop.svg");
     }
   }
 }
 
 .advantages__wrapper {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     max-width: 925px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     position: relative;
     padding-top: 80px;
     display: grid;
@@ -66,12 +66,12 @@
   margin-bottom: 28px;
   .font(@title-black, 25px, 30px, 700);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .size-line(43px, 50px);
     margin: 50px 0 44px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     .size-line(53px, 57px);
     grid-column: ~"2 / 6";
   }
@@ -80,14 +80,14 @@
 .advantages__list {
   .list-reset();
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, auto);
     grid-auto-flow: column;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     grid-column: ~"2 / 6";
   }
 }
@@ -134,7 +134,7 @@
     background-image: url("../img/gift.svg");
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding-right: 20px;
     margin-bottom: 56px;
   }
@@ -145,7 +145,7 @@
   margin: 0;
   .font(@title-black, 17px, 20px, 700);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     .size-line(20px, 22px);
   }
 }
