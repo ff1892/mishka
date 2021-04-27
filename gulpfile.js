@@ -36,8 +36,8 @@ exports.styles = styles;
 
 const html = () => {
   return gulp.src("source/*.html")
-  .pipe(htmlmin( { collapseWhitespace: true }))
-  .pipe(gulp.dest("build"))
+    .pipe(htmlmin( { collapseWhitespace: true }))
+    .pipe(gulp.dest("build"))
 }
 
 exports.html = html;
@@ -46,10 +46,10 @@ exports.html = html;
 
 const scripts = () => {
   return gulp.src("source/js/script.js")
-  .pipe(terser())
-  .pipe(rename("script.min.js"))
-  .pipe(gulp.dest("build/js"))
-  .pipe(sync.stream());
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
 }
 
 exports.scripts = scripts;
@@ -58,19 +58,19 @@ exports.scripts = scripts;
 
 const optimizeImages = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
-  .pipe(imagemin([
-    imagemin.mozjpeg({progressive: true}),
-    imagemin.optipng({optimizationLevel: 3}),
-    imagemin.svgo()
-  ]))
-  .pipe(gulp.dest("build/img"))
+    .pipe(imagemin([
+      imagemin.mozjpeg({progressive: true}),
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.images = optimizeImages;
 
 const copyImages = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
-  .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.images = copyImages;
@@ -79,8 +79,8 @@ exports.images = copyImages;
 
 const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("build/img"))
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.createWebp = createWebp;
@@ -102,7 +102,7 @@ const copy = (done) => {
   ], {
     base: "source"
   })
-  .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("build"))
   done()
 }
 
@@ -111,12 +111,12 @@ exports.copy = copy;
 // Sprite
 
 const sprite = () => {
-return gulp.src("source/img/icons/*.svg")
-.pipe(svgstore({
-  inlineSvg: true
-}))
-.pipe(rename("sprite.svg"))
-.pipe(gulp.dest("build/img"))
+  return gulp.src("source/img/icons/*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.sprite = sprite;
