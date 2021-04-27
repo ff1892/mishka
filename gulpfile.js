@@ -5,6 +5,9 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const csso = require("postcss-csso");
+const rename = require("gulp-rename");
+const htmlmin = require("gulp-htmlmin");
 
 // Styles
 
@@ -15,13 +18,25 @@ const styles = () => {
     .pipe(less())
     .pipe(postcss([
       autoprefixer()
+      // csso()
     ]))
+    // .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+// HTML
+
+// const html = () => {
+//   return gulp.src("source/*.html")
+//   .pipe(htmlmin( { collapseWhitespace: true }))
+//   .pipe(gulp.dest("source"))
+// }
+
+// exports.html = html;
 
 // Server
 
