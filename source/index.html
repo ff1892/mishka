@@ -78,7 +78,7 @@
         </div>
         <ul class="products__list">
           <li class="products__item">
-            <a class="products__link products__link--interior" href="#">
+            <a class="products__link products__link--interior" href="catalog.html#interior">
               <div class="products__link-wrapper">
               <span class="products__link-text">Предметы интерьера</span>
               <svg class="products__link-icon" width="40" height="62" role="img">
@@ -88,7 +88,7 @@
             </a>
           </li>
           <li class="products__item">
-            <a class="products__link products__link--toys" href="#">
+            <a class="products__link products__link--toys" href="catalog.html#toys">
               <div class="products__link-wrapper">
                 <span class="products__link-text">Детские игрушки</span>
                 <svg class="products__link-icon" width="60" height="60" role="img">
@@ -122,6 +122,9 @@
           </dl>
           <div class="promo__picture-wrapper">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/triple-set-mobile.webp 1x, img/triple-set-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
               <img class="promo__picture" src="img/triple-set-mobile.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Двухцветные круглые вязаные корзинки">
@@ -275,6 +278,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- MODAL -->
     <div class="overlay"></div>
     <section class="size">
       <div class="size__container">
@@ -301,6 +306,6 @@
         </form>
       </div>
     </section>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

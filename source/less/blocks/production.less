@@ -2,6 +2,14 @@
   box-shadow: inset 0 0 0 1px @menu-shadow;
   margin-bottom: 58px;
 
+  &:hover {
+    box-shadow: 0 6px 10px 0 fade(@catalog-black, 10%);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 fade(@catalog-black, 10%);
+  }
+
   @media @tablet {
     margin-bottom: 64px;
     display: grid;
