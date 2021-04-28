@@ -134,17 +134,22 @@
   border: 1px solid @menu-shadow;
   text-align: center;
 
+  &:hover .slider__icon {
+    opacity: 0.6;
+  }
+
+  &:active .slider__icon {
+    opacity: 0.3;
+  }
+
+
   @media @tablet {
     border: none;
   }
 }
 
-.slider__toggle--previous {
-  background: url("../img/huge-arrow-left.svg") no-repeat center center;
-}
-
-.slider__toggle--next {
-  background: url("../img/huge-arrow-right.svg") no-repeat center center;
+.slider__icon {
+  fill: @elem-black;
 }
 
 .reviews__write-review {

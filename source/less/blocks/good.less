@@ -1,13 +1,4 @@
 .good {
-  &:hover .good__description {
-    box-shadow: 0 6px 10px 0 fade(@catalog-black, 10%);
-  }
-
-  &:active .good__description {
-    box-shadow: 0 3px 5px 0 fade(@catalog-black, 10%);
-  }
-
-
   @media @tablet {
     display: flex;
   }
@@ -15,6 +6,28 @@
   @media @desktop {
     flex-direction: column;
     flex-basis: 316px;
+  }
+}
+
+.good:hover {
+
+  .good__description {
+    box-shadow: 0 6px 10px 0 fade(@catalog-black, 10%);
+  }
+
+  .good__cart-icon {
+    fill: @accent;
+  }
+}
+
+.good:active {
+
+  .good__description {
+    box-shadow: 0 3px 5px 0 fade(@catalog-black, 10%);
+  }
+
+  .good__cart-icon {
+    fill: fade(@accent, 30%);
   }
 }
 
@@ -112,14 +125,5 @@
 }
 
 .good__cart-icon {
-  fill-opacity: 0.2;
-
-  &:hover {
-    fill-opacity: 1;
-    fill: @accent;
-  }
-
-  &:active {
-    fill: fade(@accent, 30%);
-  }
+  fill: fade(@elem-black, 20%);
 }

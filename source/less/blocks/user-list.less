@@ -39,17 +39,17 @@
     opacity: 0.6;
   }
 
-  &:hover .user-list__shape {
+  &:hover .user-list__icon {
     fill: @accent;
-    fill-opacity: 1;
+    opacity: 1;
   }
 
   &:active .user-list__text {
     opacity: 0.3;
   }
 
-  &:active .user-list__shape {
-    fill-opacity: 0.3;
+  &:active .user-list__icon {
+    opacity: 0.3;
   }
 
   @media @tablet {
@@ -69,13 +69,10 @@
   left: 30px;
   width: 18px;
   height: 18px;
+  fill: @elem-black;
+  opacity: 0.2;
 
   &--cart {
     width: 21px;
-  }
-
-  .user-list__shape {
-    fill: @elem-black;
-    fill-opacity: 0.2;
   }
 }

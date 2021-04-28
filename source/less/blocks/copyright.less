@@ -12,15 +12,19 @@
 .copyright__link {
   margin-left: 20px;
 
-  &:hover path {
+  @media @tablet {
+    margin-left: 26px;
+  }
+}
+
+.copyright__logo {
+  fill: @accent;
+
+  &:hover {
     fill: @accent-dark-hover;
   }
 
-  &:active path {
+  &:active {
     fill: fade(@accent-dark-hover, 30%);
-  }
-
-  @media @tablet {
-    margin-left: 26px;
   }
 }
