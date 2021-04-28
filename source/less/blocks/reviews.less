@@ -64,8 +64,23 @@
   }
 }
 
-.slider__item--hidden {
+.slider__item{
   display: none;
+
+  &--show {
+    display: block;
+    animation: slider-change;
+    animation-duration: 1s;
+  }
+}
+
+@keyframes slider-change {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .reviews__citation {

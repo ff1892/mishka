@@ -68,24 +68,24 @@ window.addEventListener("keydown", function(evt) {
 buttonNext.addEventListener("click", function() {
   slideIndex ++
   if (slideIndex >= slides.length) {
-    slides[slideIndex-1].classList.add("slider__item--hidden");
+    slides[slideIndex-1].classList.remove("slider__item--show");
     slideIndex = 0;
-    slides[slideIndex].classList.remove("slider__item--hidden");
+    slides[slideIndex].classList.add("slider__item--show");
   } else {
-    slides[slideIndex-1].classList.add("slider__item--hidden");
-    slides[slideIndex].classList.remove("slider__item--hidden");
+    slides[slideIndex-1].classList.remove("slider__item--show");
+    slides[slideIndex].classList.add("slider__item--show");
   }
 });
 
 buttonPrevious.addEventListener("click", function() {
-  slideIndex --
-  if (slideIndex < slides.length) {
-    slides[slideIndex+1].classList.add("slider__item--hidden");
-    slideIndex = -1;
-    slides[slideIndex].classList.remove("slider__item--hidden");
+  slideIndex --;
+  if (slideIndex >= 0) {
+    slides[slideIndex + 1].classList.remove("slider__item--show");
+    slides[slideIndex].classList.add("slider__item--show");
   } else {
-    slides[slideIndex-1].classList.remove("slider__item--hidden");
-    slides[slideIndex].classList.add("slider__item--hidden");
+    slides[slideIndex + 1].classList.remove("slider__item--show");
+    slideIndex = slides.length - 1;
+    slides[slideIndex].classList.add("slider__item--show");
   }
 });
 
