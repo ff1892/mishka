@@ -88,5 +88,3 @@ buttonPrevious.addEventListener("click", function() {
     slides[slideIndex].classList.add("slider__item--show");
   }
 });
-
-
