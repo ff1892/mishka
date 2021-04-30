@@ -115,7 +115,8 @@
     .size-line(20px, 30px);
   }
 
-  &:hover .products__link-icon {
+  &:hover .products__link-icon,
+  &:focus .products__link-icon {
     opacity: 0.7;
   }
 
@@ -154,7 +155,8 @@
 .products__link--interior {
   background-color: @accent;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @accent-hover;
   }
 
@@ -166,7 +168,8 @@
 .products__link--toys {
   background-color: @accent-dark;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @accent-dark-hover;
   }
 

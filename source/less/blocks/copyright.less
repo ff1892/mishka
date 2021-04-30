@@ -20,12 +20,13 @@
 
 .copyright__logo {
   fill: @accent;
+}
 
-  &:hover {
-    fill: @accent-dark-hover;
-  }
+.copyright__link:hover .copyright__logo,
+.copyright__link:focus .copyright__logo {
+  fill: @accent-dark-hover;
+}
 
-  &:active {
-    fill: fade(@accent-dark-hover, 30%);
-  }
+.copyright__link:active .copyright__logo {
+  fill: fade(@accent-dark-hover, 30%);
 }

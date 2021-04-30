@@ -34,11 +34,13 @@
   color: @link-black;
   text-decoration: none;
 
-  &:hover .user-list__text {
+  &:hover .user-list__text,
+  &:focus .user-list__text {
     opacity: 0.6;
   }
 
-  &:hover .user-list__icon {
+  &:hover .user-list__icon,
+  &:focus .user-list__icon {
     fill: @accent;
     opacity: 1;
   }

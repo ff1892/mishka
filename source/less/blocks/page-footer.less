@@ -25,14 +25,15 @@
 
 .page-footer__icon-logo {
   fill: @elem-black;
+}
 
-  &:hover {
-    fill: @accent-dark-hover;
-  }
+.page-footer__logo:hover .page-footer__icon-logo,
+.page-footer__logo:focus .page-footer__icon-logo {
+  fill: @accent-dark-hover;
+}
 
-  &:active {
-    fill: fade(@accent-dark-hover, 30%);
-  }
+.page-footer__logo:active .page-footer__icon-logo {
+  fill: fade(@accent-dark-hover, 30%);
 }
 
 .page-footer__social {

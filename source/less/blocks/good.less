@@ -135,3 +135,12 @@
 .good__cart-icon {
   fill: fade(@elem-black, 20%);
 }
+
+.good__cart:hover .good__cart-icon,
+.good__cart:focus .good__cart-icon {
+  fill: @accent
+}
+
+.good__cart:active .good__cart-icon {
+  fill: fade(@accent, 30%);
+}
