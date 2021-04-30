@@ -12,10 +12,11 @@ const terser = require("gulp-terser");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const imagemin = require("gulp-imagemin");
 
-// Styles
+// Styles Min
 
-const styles = () => {
+const stylesmin = () => {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -25,6 +26,24 @@ const styles = () => {
       csso()
     ]))
     .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+}
+
+exports.stylesmin = stylesmin;
+
+// Styles
+
+const styles = () => {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(rename("style.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -159,6 +178,7 @@ const build = gulp.series (
   copy,
   optimizeImages,
   gulp.parallel (
+    stylesmin,
     styles,
     html,
     scripts,
