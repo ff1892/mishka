@@ -145,6 +145,10 @@
       left: 18px;
     }
   }
+
+  .form__input:focus + label::before {
+    outline: 2px auto @accent-input;
+  }
 }
 
 // CHECKBOX
@@ -253,6 +257,10 @@
     @media @desktop {
       top: 12px;
     }
+  }
+
+  .form__input:focus + label::before {
+    outline: 2px auto @accent-input;
   }
 }
 
