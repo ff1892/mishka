@@ -14,11 +14,14 @@
 }
 
 .social__icon {
-  &:hover path {
-    fill: @accent-dark-hover;
-  }
+  fill: @elem-black;
+}
 
-  &:active path {
-    fill: fade(@accent-dark-hover, 30%);
-  }
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: @accent-dark-hover;
+}
+
+.social__link:active .social__icon {
+  fill: fade(@accent-dark-hover, 30%);
 }

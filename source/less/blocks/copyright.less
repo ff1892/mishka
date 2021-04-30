@@ -1,5 +1,6 @@
 .copyright {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -12,15 +13,20 @@
 .copyright__link {
   margin-left: 20px;
 
-  &:hover path {
-    fill: @accent-dark-hover;
-  }
-
-  &:active path {
-    fill: fade(@accent-dark-hover, 30%);
-  }
-
   @media @tablet {
-    margin-left: 26px;
+    margin-left: 30px;
   }
+}
+
+.copyright__logo {
+  fill: @accent;
+}
+
+.copyright__link:hover .copyright__logo,
+.copyright__link:focus .copyright__logo {
+  fill: @accent-dark-hover;
+}
+
+.copyright__link:active .copyright__logo {
+  fill: fade(@accent-dark-hover, 30%);
 }

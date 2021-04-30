@@ -1,13 +1,4 @@
 .good {
-  &:hover .good__description {
-    box-shadow: 0 6px 10px 0 fade(@catalog-black, 10%);
-  }
-
-  &:active .good__description {
-    box-shadow: 0 3px 5px 0 fade(@catalog-black, 10%);
-  }
-
-
   @media @tablet {
     display: flex;
   }
@@ -15,6 +6,30 @@
   @media @desktop {
     flex-direction: column;
     flex-basis: 316px;
+  }
+}
+
+.good:hover {
+  box-shadow: 0 6px 10px 0 fade(@catalog-black, 10%);
+
+  .good__cart-icon {
+    fill: @accent;
+  }
+
+  .good__title-link {
+    opacity: 0.6;
+  }
+}
+
+.good:active {
+  box-shadow: 0 3px 5px 0 fade(@catalog-black, 10%);
+
+  .good__cart-icon {
+    fill: fade(@accent, 30%);
+  }
+
+  .good__title-link {
+    opacity: 0.3;
   }
 }
 
@@ -40,6 +55,11 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+
+  @media @desktop {
+    height: 462px;
+    width: 316px;
+  }
 }
 
 .good__description {
@@ -66,8 +86,9 @@
 }
 
 .good__title-link {
+  text-decoration: none;
   .font-size(17px, 24px, 700);
-  .text-link();
+  color: @link-black;
 
   @media @tablet {
     font-size: 20px;
@@ -112,14 +133,14 @@
 }
 
 .good__cart-icon {
-  fill-opacity: 0.2;
+  fill: fade(@elem-black, 20%);
+}
 
-  &:hover {
-    fill-opacity: 1;
-    fill: @accent;
-  }
+.good__cart:hover .good__cart-icon,
+.good__cart:focus .good__cart-icon {
+  fill: @accent;
+}
 
-  &:active {
-    fill: fade(@accent, 30%);
-  }
+.good__cart:active .good__cart-icon {
+  fill: fade(@accent, 30%);
 }

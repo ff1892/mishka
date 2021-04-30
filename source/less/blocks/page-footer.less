@@ -23,6 +23,19 @@
   }
 }
 
+.page-footer__icon-logo {
+  fill: @elem-black;
+}
+
+.page-footer__logo:hover .page-footer__icon-logo,
+.page-footer__logo:focus .page-footer__icon-logo {
+  fill: @accent-dark-hover;
+}
+
+.page-footer__logo:active .page-footer__icon-logo {
+  fill: fade(@accent-dark-hover, 30%);
+}
+
 .page-footer__social {
   padding-bottom: 22px;
   margin-bottom: 21px;

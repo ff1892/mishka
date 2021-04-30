@@ -24,19 +24,15 @@
   @media @desktop {
     margin-bottom: 60px;
     background: @bg-grey-light url("../img/hero-desktop.jpg") no-repeat center bottom;
-    overflow-x: hidden;
-    // SCROLL BUG =============================================
+    overflow: hidden;
 
     &::before {
       .pseudo();
       height: 34px;
       left: -50px;
       right: -50px;
-      // left: 0;
-      // right: 0;
       bottom: -16px;
-      background: url("../img/zigzag-fill-desktop.svg");
-      background-size: cover;
+      background: url("../img/zigzag-fill-desktop.svg") repeat-x;
     }
 
     @media @retina {
@@ -119,13 +115,19 @@
     .size-line(20px, 30px);
   }
 
-  &:hover .products__icon-shape {
+  &:hover .products__link-icon,
+  &:focus .products__link-icon {
     opacity: 0.7;
   }
 
-  &:active .products__icon-shape {
+  &:active .products__link-icon {
     opacity: 0.3;
   }
+}
+
+.products__link-icon {
+  fill: @accent-icons;
+  opacity: 0.5;
 }
 
 .products__link-wrapper {
@@ -153,7 +155,8 @@
 .products__link--interior {
   background-color: @accent;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @accent-hover;
   }
 
@@ -165,7 +168,8 @@
 .products__link--toys {
   background-color: @accent-dark;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @accent-dark-hover;
   }
 
