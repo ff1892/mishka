@@ -1,4 +1,13 @@
 .good {
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 fade(@catalog-black, 10%);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 fade(@catalog-black, 10%);
+  }
+
   @media @tablet {
     display: flex;
   }
@@ -6,30 +15,6 @@
   @media @desktop {
     flex-direction: column;
     flex-basis: 316px;
-  }
-}
-
-.good:hover {
-  box-shadow: 0 6px 10px 0 fade(@catalog-black, 10%);
-
-  .good__cart-icon {
-    fill: @accent;
-  }
-
-  .good__title-link {
-    opacity: 0.6;
-  }
-}
-
-.good:active {
-  box-shadow: 0 3px 5px 0 fade(@catalog-black, 10%);
-
-  .good__cart-icon {
-    fill: fade(@accent, 30%);
-  }
-
-  .good__title-link {
-    opacity: 0.3;
   }
 }
 
@@ -63,7 +48,7 @@
 }
 
 .good__description {
-  padding: 25px 0 27px 27px;
+  padding: 29px 0 27px 27px;
   box-shadow: inset 0 0 0 1px @menu-shadow;
 
   @media @tablet {
@@ -87,6 +72,7 @@
 
 .good__title-link {
   text-decoration: none;
+  .text-link();
   .font-size(17px, 24px, 700);
   color: @link-black;
 
@@ -122,8 +108,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 23px;
-  margin-right: 28px;
+  padding-top: 22px;
+  margin-right: 26px;
   border-top: 1px solid @menu-shadow;
 
   @media @tablet {
@@ -134,13 +120,12 @@
 
 .good__cart-icon {
   fill: fade(@elem-black, 20%);
-}
 
-.good__cart:hover .good__cart-icon,
-.good__cart:focus .good__cart-icon {
-  fill: @accent;
-}
+  &:hover {
+    fill: @accent;
+  }
 
-.good__cart:active .good__cart-icon {
-  fill: fade(@accent, 30%);
+  &:active {
+    fill: fade(@accent, 30%);
+  }
 }

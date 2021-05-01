@@ -13,8 +13,8 @@ let choose = document.querySelector(".size__submit");
 // Slider variables
 
 let slides = document.querySelectorAll(".slider__item");
-let buttonPrevious = document.querySelector(".slider__toggle--previous");
-let buttonNext = document.querySelector(".slider__toggle--next");
+let buttonPrevious = document.querySelector(".reviews__toggle--previous");
+let buttonNext = document.querySelector(".reviews__toggle--next");
 let slideIndex = 0;
 
 // Menu script

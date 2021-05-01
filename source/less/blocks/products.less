@@ -13,6 +13,7 @@
       right: 0;
       bottom: -12px;
       background: url("../img/zigzag-fill-tablet.svg") repeat-x;
+      z-index: 2;
     }
 
     @media @retina {
@@ -115,6 +116,12 @@
     .size-line(20px, 30px);
   }
 
+  &:hover,
+  &:focus,
+  &:active {
+    transform: translateY(-5px);
+  }
+
   &:hover .products__link-icon,
   &:focus .products__link-icon {
     opacity: 0.7;
@@ -156,12 +163,13 @@
   background-color: @accent;
 
   &:hover,
-  &:focus {
-    background-color: @accent-hover;
-  }
-
+  &:focus,
   &:active {
     background-color: @accent-hover;
+
+    @media @tablet {
+      box-shadow: 0 5px 0 @accent-hover;
+    }
   }
 }
 
@@ -169,11 +177,12 @@
   background-color: @accent-dark;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     background-color: @accent-dark-hover;
   }
 
-  &:active {
-    background-color: @accent-dark-hover;
+  @media @tablet {
+    box-shadow: 0 5px 0 @accent-dark-hover;
   }
 }

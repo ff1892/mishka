@@ -1,8 +1,13 @@
 .social {
   .list-reset();
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  @media @tablet {
+    justify-content: flex-start;
+  }
 }
 
 .social__item {

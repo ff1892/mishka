@@ -348,6 +348,12 @@
 
 // CONTACTS
 
+.form__fieldset--contacts {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 .form__background-fieldset--contacts {
   @media @tablet {
     padding-top: 60px;
@@ -355,6 +361,8 @@
     margin-bottom: 50px;
   }
 }
+
+// PHONE
 
 .form__fieldset--phone {
   display: flex;
@@ -393,13 +401,10 @@
     }
   }
 
-  .form__input-wrapper::before {
-    .pseudo();
-    width: 25px;
-    height: 24px;
+  .form__input-icon--phone {
+    position: absolute;
     top: -5px;
     right: 7px;
-    background: url("../img/phone.svg");
 
     @media @tablet {
       top: 1px;
@@ -411,6 +416,8 @@
     }
   }
 }
+
+// EMAIL
 
 
 .form__fieldset--email {
@@ -451,13 +458,10 @@
     }
   }
 
-  .form__input-wrapper::before {
-    .pseudo();
-    width: 32px;
-    height: 21px;
-    top: 0;
-    right: 3px;
-    background: url("../img/mail.svg");
+  .form__input-icon--mail {
+    position: absolute;
+    top: -5px;
+    right: 7px;
 
     @media @tablet {
       top: 4px;
@@ -465,9 +469,22 @@
     }
 
     @media @desktop {
-      right: 4px;
+      right: 8px;
     }
   }
+}
+
+// ICONS
+
+.form__input-icon {
+  fill: @elem-black;
+  opacity: 0.2;
+}
+
+.form__input:hover + .form__input-icon,
+.form__input:focus + .form__input-icon {
+  fill: @accent-input;
+  opacity: 1;
 }
 
 // TEXTAREA
