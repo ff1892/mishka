@@ -98,12 +98,6 @@
   @media @tablet {
     flex-basis: 50%;
   }
-
-  &:last-child {
-    @media @mobile {
-      box-shadow: 0 4px 4px @black-25;
-    }
-  }
 }
 
 .products__link {
@@ -166,10 +160,7 @@
   &:focus,
   &:active {
     background-color: @accent-hover;
-
-    @media @tablet {
-      box-shadow: 0 5px 0 @accent-hover;
-    }
+    box-shadow: 0 5px 0 @accent-hover;
   }
 }
 
@@ -180,9 +171,6 @@
   &:focus,
   &:active {
     background-color: @accent-dark-hover;
-  }
-
-  @media @tablet {
     box-shadow: 0 5px 0 @accent-dark-hover;
   }
 }

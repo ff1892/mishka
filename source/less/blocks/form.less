@@ -349,9 +349,13 @@
 // CONTACTS
 
 .form__fieldset--contacts {
-  margin: 0;
-  padding: 0;
-  border: 0;
+  @media @tablet {
+    display: block;
+  }
+
+  @media @desktop {
+    margin: 0;
+  }
 }
 
 .form__background-fieldset--contacts {
